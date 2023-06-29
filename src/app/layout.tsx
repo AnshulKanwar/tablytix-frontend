@@ -1,8 +1,8 @@
 import Nav from "@/components/nav";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Tablytix",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={quicksand.className}>
         <Nav />
         {children}
       </body>
