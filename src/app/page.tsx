@@ -1,5 +1,6 @@
+import Button from "@/components/ui/button";
 import ComingSoon from "@/components/ui/coming-soon";
-import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const products = [
   {
@@ -29,9 +30,19 @@ export default function Home() {
         <div className="p-3 grid grid-cols-3 gap-3 bg-slate-100 rounded-lg">
           {products.map(({ name, isReady, href, description }) => (
             <div key={name} className="p-5 rounded-md bg-white">
-              <h1 className="mb-5 text-lg font-semibold">{name}</h1>
+              <h1 className="mb-3 text-lg font-semibold">{name}</h1>
               {isReady ? (
-                <p className="text-slate-600">{description}</p>
+                <div className="space-y-2">
+                  <p className="text-slate-600">{description}</p>
+                  <Button
+                    asLink
+                    href={href}
+                    className="flex gap-3 group"
+                  >
+                    <p className="font-semibold">Try Now</p>
+                    <ArrowRight className="transition group-hover:translate-x-1" />
+                  </Button>
+                </div>
               ) : (
                 <ComingSoon />
               )}
