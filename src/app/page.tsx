@@ -1,4 +1,22 @@
 import ComingSoon from "@/components/ui/coming-soon";
+import Link from "next/link";
+
+const products = [
+  {
+    name: "Logo Redaction",
+    isReady: true,
+    href: "logo_redaction",
+    description: "Redact logos from documents",
+  },
+  {
+    name: "Financial Data Extraction",
+    isReady: false,
+  },
+  {
+    name: "Document Analysis",
+    isReady: false,
+  },
+];
 
 export default function Home() {
   return (
@@ -9,18 +27,16 @@ export default function Home() {
           documents in various formats
         </p>
         <div className="p-3 grid grid-cols-3 gap-3 bg-slate-100 rounded-lg">
-          <div className="p-5 rounded-md bg-white transition hover:scale-105">
-            <h1 className="mb-5 text-lg font-semibold">Logo Redaction</h1>
-            <p className="text-slate-600">Redact logos from documents</p>
-          </div>
-          <div className="p-5 rounded-md bg-white transition hover:scale-105">
-            <h1 className="mb-5 text-lg font-semibold">Financial Data Extraction</h1>
-            <ComingSoon />
-          </div>
-          <div className="p-5 rounded-md bg-white transition hover:scale-105">
-            <h1 className="mb-5 text-lg font-semibold">Document Analysis</h1>
-            <ComingSoon />
-          </div>
+          {products.map(({ name, isReady, href, description }) => (
+            <div key={name} className="p-5 rounded-md bg-white">
+              <h1 className="mb-5 text-lg font-semibold">{name}</h1>
+              {isReady ? (
+                <p className="text-slate-600">{description}</p>
+              ) : (
+                <ComingSoon />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </main>
