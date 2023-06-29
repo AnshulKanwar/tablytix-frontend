@@ -29,11 +29,11 @@ export default function Home() {
         </p>
         <div className="p-3 grid grid-cols-3 gap-3 bg-slate-100 rounded-lg">
           {products.map(({ name, isReady, href, description }) => (
-            <div key={name} className="p-5 rounded-md bg-white">
+            <div key={name} className="p-5 flex flex-col justify-between items-start rounded-md bg-white">
               <h1 className="mb-3 text-lg font-semibold">{name}</h1>
               {isReady ? (
                 <div className="space-y-2">
-                  <p className="text-slate-600">{description}</p>
+                  <p className="text-slate-500">{description}</p>
                   <Button
                     asLink
                     href={href}
