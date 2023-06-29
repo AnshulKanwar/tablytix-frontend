@@ -11,12 +11,17 @@ export default function Nav() {
   return (
     <nav className="px-16 py-10 flex justify-between">
       <div>
-        <h1 className="text-3xl font-bold">Tablytix</h1>
+        <Link href="/">
+          <h1 className="text-3xl font-bold">Tablytix</h1>
+        </Link>
       </div>
       <div>
         <ul className="flex">
           {links.map(({ name, href }) => (
-            <li key={name} className="font-medium text-slate-600 hover:text-slate-800">
+            <li
+              key={name}
+              className="font-medium text-slate-600 hover:text-slate-800"
+            >
               <Link href={href}>{name}</Link>
             </li>
           ))}
