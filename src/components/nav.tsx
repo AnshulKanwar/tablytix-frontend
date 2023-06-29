@@ -20,7 +20,7 @@ export default function Nav() {
           {links.map(({ name, href }) => (
             <li
               key={name}
-              className="font-medium text-slate-600 hover:text-slate-800"
+              className="font-medium text-slate-500 hover:text-slate-800"
             >
               <Link href={href}>{name}</Link>
             </li>
