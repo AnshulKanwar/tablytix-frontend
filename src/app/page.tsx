@@ -37,7 +37,7 @@ export default function Home() {
                   <Button
                     asLink
                     href={href}
-                    className="flex gap-3 group"
+                    className="flex items-center gap-3 group"
                   >
                     <p className="font-semibold">Try Now</p>
                     <ArrowRight className="transition group-hover:translate-x-1" />

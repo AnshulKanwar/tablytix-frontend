@@ -16,16 +16,16 @@ export default function ThemeToggle() {
   }
 
   return (
-    <div className="flex items-center hover:bg-slate-100 dark:hover:bg-slate-900 p-1.5 rounded-md">
+    <div className="flex items-center hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md">
       <button
         onClick={() => setTheme("dark")}
-        className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+        className="p-1.5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
       >
         <Sun />
       </button>
       <button
         onClick={() => setTheme("light")}
-        className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+        className="p-1.5 absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
       >
         <Moon />
       </button>
