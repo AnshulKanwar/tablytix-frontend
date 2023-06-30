@@ -1,7 +1,7 @@
 import Nav from "@/components/nav";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
-import { Providers } from "./providers";
+import { Providers } from "@/components/providers";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 const links = [
   {
@@ -16,15 +17,18 @@ export default function Nav() {
         </Link>
       </div>
       <div>
-        <ul className="flex">
+        <ul className="flex gap-12 items-center">
           {links.map(({ name, href }) => (
             <li
               key={name}
-              className="font-medium text-slate-500 hover:text-slate-800"
+              className="font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
             >
               <Link href={href}>{name}</Link>
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </div>
     </nav>
