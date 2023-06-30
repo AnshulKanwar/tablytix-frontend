@@ -21,15 +21,17 @@ export default function Button({
       {asLink ? (
         <Link
           href={href!}
-          className={`max-w-fit px-4 py-1.5 text-sm rounded-lg bg-slate-800 dark:bg-slate-200 text-white dark:text-black ${className}`}
+          className={`max-w-fit px-4 py-1.5 text-sm rounded-lg bg-slate-800 dark:bg-slate-100 text-white dark:text-black ${className}`}
         >
           {children}
         </Link>
       ) : (
         <button
           onClick={onClick}
-          className={`px-5 py-2 text-sm rounded-lg bg-slate-900 text-white ${className}`}
-        ></button>
+          className={`px-5 py-2 text-sm rounded-lg bg-slate-800 dark:bg-slate-100 text-white dark:text-black ${className}`}
+        >
+          {children}
+        </button>
       )}
     </div>
   );

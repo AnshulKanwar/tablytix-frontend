@@ -21,9 +21,9 @@ const products = [
 
 export default function Home() {
   return (
-    <main className="min-h-[calc(100vh-8rem)] grid place-items-center">
+    <main className="mt-36 grid place-items-center">
       <div className="max-w-4xl space-y-12">
-        <p className="text-4xl font-bold">
+        <p className="text-3xl font-bold">
           Perform document analysis, logo redaction and extract tables from
           documents in various formats
         </p>
