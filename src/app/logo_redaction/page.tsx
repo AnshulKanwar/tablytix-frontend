@@ -14,7 +14,7 @@ export default function LogoRedaction() {
 
   return (
     <main className="mt-20 grid place-items-center">
-      <div className="flex flex-col items-center gap-8 border-2 border-slate-800 w-3/12 text-center p-10 rounded-xl">
+      <div className="flex flex-col items-center gap-8 min-w-fit max-w-md w-1/2 border-2 border-slate-800 text-center py-10 px-20 rounded-xl">
         <h1 className="text-2xl font-bold">Upload file</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex justify-between items-center gap-10">

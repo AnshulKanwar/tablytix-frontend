@@ -23,16 +23,16 @@ export default function Home() {
   return (
     <main className="mt-36 grid place-items-center">
       <div className="max-w-4xl space-y-12">
-        <p className="text-3xl font-bold">
+        <p className="text-2xl sm:text-3xl font-bold">
           Perform document analysis, logo redaction and extract tables from
           documents in various formats
         </p>
-        <div className="p-3 grid grid-cols-3 gap-3 bg-slate-100 dark:bg-slate-900 rounded-lg">
+        <div className="p-3 grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-100 dark:bg-slate-900 rounded-lg">
           {products.map(({ name, isReady, href, description }) => (
             <div key={name} className="p-5 flex flex-col justify-between items-start rounded-md bg-white dark:bg-black cursor-default">
               <h1 className="mb-3 text-lg font-semibold">{name}</h1>
               {isReady ? (
-                <div className="space-y-2">
+                <div className="w-full flex justify-between md:flex-col md:items-start gap-3 items-center">
                   <p className="text-slate-500">{description}</p>
                   <Button
                     asLink

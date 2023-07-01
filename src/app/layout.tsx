@@ -18,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} bg-white text-black dark:bg-black dark:text-white`}>
+      <body
+        className={`${quicksand.className} bg-white text-black dark:bg-black dark:text-white px-10`}
+      >
         <Providers>
           <Nav />
           {children}
