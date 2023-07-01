@@ -18,7 +18,7 @@ export default function LogoRedaction() {
 
     try {
       const response = await axios.post(
-        "http://34.125.78.144:80/logo_redaction",
+        "/api/logo_redaction",
         {
           file: selectedFile,
         },
@@ -36,8 +36,6 @@ export default function LogoRedaction() {
       console.error(error);
     }
   };
-
-  console.log(responseURL);
 
   return (
     <main className="grid place-items-center">
@@ -83,7 +81,7 @@ export default function LogoRedaction() {
         <div className="space-y-5 ">
           <Button className="font-bold" onClick={() => setResponseURL(null)}>Upload another image</Button>
           <Image
-            src={`http://34.125.78.144:80/logo_redaction/${responseURL}.png`}
+            src={`/api/logo_redaction/${responseURL}.png`}
             className="rounded-lg"
             alt="response"
             width={500}
