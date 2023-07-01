@@ -21,7 +21,7 @@ const products = [
 
 export default function Home() {
   return (
-    <main className="mt-36 grid place-items-center">
+    <main className="grid place-items-center">
       <div className="max-w-4xl space-y-12">
         <p className="text-2xl sm:text-3xl font-bold">
           Perform document analysis, logo redaction and extract tables from
@@ -32,7 +32,7 @@ export default function Home() {
             <div key={name} className="p-5 flex flex-col justify-between items-start rounded-md bg-white dark:bg-black cursor-default">
               <h1 className="mb-3 text-lg font-semibold">{name}</h1>
               {isReady ? (
-                <div className="w-full flex justify-between md:flex-col md:items-start gap-3 items-center">
+                <div className="space-y-3">
                   <p className="text-slate-500">{description}</p>
                   <Button
                     asLink

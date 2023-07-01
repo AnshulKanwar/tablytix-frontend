@@ -8,6 +8,7 @@ const links = [
   },
 ];
 
+// TODO: responsive Nav
 export default function Nav() {
   return (
     <nav className="py-10 flex justify-between">
@@ -21,7 +22,7 @@ export default function Nav() {
           {links.map(({ name, href }) => (
             <li
               key={name}
-              className="font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+              className="hidden md:inline font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
             >
               <Link href={href}>{name}</Link>
             </li>

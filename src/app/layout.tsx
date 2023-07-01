@@ -19,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} bg-white text-black dark:bg-black dark:text-white px-10`}
+        className={`${quicksand.className} bg-white text-black dark:bg-black dark:text-white px-5 sm:px-10 pb-20`}
       >
         <Providers>
           <Nav />
+          <div className="mt-20">
           {children}
+          </div>
         </Providers>
       </body>
     </html>
