@@ -29,7 +29,7 @@ export default function Home() {
         </p>
         <div className="p-3 grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-100 dark:bg-slate-900 rounded-lg">
           {products.map(({ name, isReady, href, description }) => (
-            <div key={name} className="p-5 flex flex-col justify-between items-start rounded-md bg-white dark:bg-black cursor-default">
+            <div key={name} className="p-5 flex flex-col justify-between items-start rounded-md bg-white dark:bg-slate-950 cursor-default">
               <h1 className="mb-3 text-lg font-semibold">{name}</h1>
               {isReady ? (
                 <div className="space-y-3">
