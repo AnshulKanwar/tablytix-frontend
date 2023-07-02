@@ -9,7 +9,8 @@ import Image from "next/image";
 
 export default function LogoRedaction() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [responseURL, setResponseURL] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -33,6 +34,8 @@ export default function LogoRedaction() {
       setIsLoading(false);
       setResponseURL(url);
     } catch (error) {
+      setError("Uh oh! an error occured. Please try again");
+      setIsLoading(false);
       console.error(error);
     }
   };
@@ -69,17 +72,21 @@ export default function LogoRedaction() {
                 />
               </label>
             </div>
+            {error && <div className="text-rose-500">{error}</div>}
             <Button className="font-semibold">
-              {!isLoading ? 
-              <input type="submit" value="Go" /> :
-              <span>Processing...</span>
-              }
+              {!isLoading ? (
+                <input type="submit" value="Go" />
+              ) : (
+                <span>Processing...</span>
+              )}
             </Button>
           </form>
         </div>
       ) : (
         <div className="space-y-5 ">
-          <Button className="font-bold" onClick={() => setResponseURL(null)}>Upload another image</Button>
+          <Button className="font-bold" onClick={() => setResponseURL(null)}>
+            Upload another image
+          </Button>
           <Image
             src={`/api/logo_redaction/${responseURL}.png`}
             className="rounded-lg"
