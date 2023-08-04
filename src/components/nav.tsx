@@ -22,7 +22,7 @@ export default function Nav() {
           {links.map(({ name, href }) => (
             <li
               key={name}
-              className="hidden md:inline font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+              className="hidden md:inline font-medium text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
             >
               <Link href={href}>{name}</Link>
             </li>

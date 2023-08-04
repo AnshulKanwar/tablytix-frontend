@@ -16,7 +16,7 @@ export default function ThemeToggle() {
   }
 
   return (
-    <div className="flex items-center hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md">
+    <div className="flex items-center hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-md">
       <button
         onClick={() => setTheme("dark")}
         className="p-1.5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
