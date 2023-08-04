@@ -19,7 +19,7 @@ export default function LogoRedaction() {
 
     try {
       const response = await axios.post(
-        "/api/logo-redaction",
+        "/api/layout-analysis",
         {
           file: selectedFile,
         },
@@ -89,7 +89,7 @@ export default function LogoRedaction() {
             Upload another image
           </Button>
           <Image
-            src={`/api/logo_redaction/${responseURL}.png`}
+            src={`/api/layout-analysis/${responseURL}.png`}
             className="rounded-lg"
             alt="response"
             width={500}

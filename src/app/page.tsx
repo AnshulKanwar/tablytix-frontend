@@ -4,6 +4,12 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
+    name: "Layout Analysis",
+    isReady: true,
+    href: "layout_analysis",
+    description: "Perform layout analysis"
+  },
+  {
     name: "Logo Redaction",
     isReady: true,
     href: "logo_redaction",
@@ -11,10 +17,6 @@ const products = [
   },
   {
     name: "Financial Data Extraction",
-    isReady: false,
-  },
-  {
-    name: "Document Analysis",
     isReady: false,
   },
 ];
