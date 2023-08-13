@@ -3,8 +3,8 @@ import ThemeToggle from "./theme-toggle";
 
 const links = [
   {
-    name: "Logo Redaction",
-    href: "logo-redaction",
+    name: "Layout Analysis",
+    href: "layout-analysis",
   },
   {
     name: "Layout Analysis",
