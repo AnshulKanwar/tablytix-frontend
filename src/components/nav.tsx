@@ -6,6 +6,10 @@ const links = [
     name: "Logo Redaction",
     href: "logo_redaction",
   },
+  {
+    name: "Layout Analysis",
+    href: "layout_analysis",
+  },
 ];
 
 // TODO: responsive Nav
