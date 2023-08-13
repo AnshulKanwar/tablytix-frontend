@@ -11,7 +11,7 @@ export default function LogoRedaction() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [responseURL, setResponseURL] = useState<string | null>(null);
+  const [slug, setSlug] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,10 +30,9 @@ export default function LogoRedaction() {
         }
       );
 
-      const { url } = response.data;
+      const { slug } = response.data;
       setIsLoading(false);
-      console.log(response.data)
-      setResponseURL(url);
+      setSlug(slug);
     } catch (error) {
       setError("Uh oh! an error occured. Please try again");
       setIsLoading(false);
@@ -43,7 +42,7 @@ export default function LogoRedaction() {
 
   return (
     <main className="grid place-items-center">
-      {!responseURL ? (
+      {!slug ? (
         <div className="flex flex-col items-center gap-8 min-w-fit max-w-md w-full border-2 border-zinc-800 text-center py-10 px-5 rounded-xl">
           <h1 className="text-2xl font-bold">Upload file</h1>
           <form onSubmit={handleSubmit} className="flex flex-col w-full gap-5">
@@ -85,11 +84,11 @@ export default function LogoRedaction() {
         </div>
       ) : (
         <div className="space-y-5 ">
-          <Button className="font-bold" onClick={() => setResponseURL(null)}>
+          <Button className="font-bold" onClick={() => setSlug(null)}>
             Upload another image
           </Button>
           <Image
-            src={`/api/layout-analysis/${responseURL}.png`}
+            src={`/api/results/${slug}`}
             className="rounded-lg"
             alt="response"
             width={500}
