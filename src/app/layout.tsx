@@ -20,7 +20,7 @@ export default function RootLayout({
       >
         <Providers>
           <Nav />
-          <div className="mt-`20">
+          <div className="mt-20">
           {children}
           </div>
         </Providers>

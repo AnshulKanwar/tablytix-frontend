@@ -2,17 +2,17 @@ import Button from "@/components/ui/button";
 import ComingSoon from "@/components/ui/coming-soon";
 import { ArrowRight } from "lucide-react";
 
-const products = [
+const tools = [
   {
     name: "Layout Analysis",
     isReady: true,
-    href: "layout_analysis",
+    href: "layout-analysis",
     description: "Perform layout analysis",
   },
   {
     name: "Logo Redaction",
     isReady: true,
-    href: "logo_redaction",
+    href: "logo-redaction",
     description: "Redact logos from documents",
   },
   {
@@ -42,7 +42,7 @@ export default function Home() {
           from documents in various formats
         </p>
         <div className="p-3 grid grid-cols-1 md:grid-cols-3 gap-3 bg-zinc-100 dark:bg-zinc-900 rounded-lg">
-          {products.map(({ name, isReady, href, description }) => (
+          {tools.map(({ name, isReady, href, description }) => (
             <div
               key={name}
               className="p-5 flex flex-col justify-between items-start rounded-md bg-white dark:bg-zinc-950 cursor-default"

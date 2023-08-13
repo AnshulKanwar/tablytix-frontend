@@ -7,7 +7,12 @@ import { truncate } from "lodash";
 import axios from "axios";
 import Image from "next/image";
 
-export default function LogoRedaction() {
+interface ToolProps {
+    title: string,
+    onSubmitUrl: string
+}
+
+export default function Tool({ title, onSubmitUrl }: ToolProps) {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +24,7 @@ export default function LogoRedaction() {
 
     try {
       const response = await axios.post(
-        "/api/layout-analysis",
+        onSubmitUrl,
         {
           file: selectedFile,
         },
@@ -42,10 +47,10 @@ export default function LogoRedaction() {
 
   return (
     <main className="grid place-items-center">
-      <h1 className="text-3xl font-bold mb-10">Layout Analysis</h1>
+      <h1 className="text-3xl font-bold mb-10">{title}</h1>
       {!slug ? (
         <div className="flex flex-col items-center gap-8 min-w-fit max-w-md w-full border-2 border-zinc-800 text-center py-10 px-5 rounded-xl">
-          <h2 className="text-xl font-semibold">Upload file</h2>
+          <h1 className="text-xl font-semibold">Upload file</h1>
           <form onSubmit={handleSubmit} className="flex flex-col w-full gap-5">
             <div className="flex justify-between items-center gap-10">
               <label
