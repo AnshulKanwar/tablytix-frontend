@@ -7,8 +7,8 @@ const links = [
     href: "layout-analysis",
   },
   {
-    name: "Layout Analysis",
-    href: "layout-analysis",
+    name: "Logo Redaction",
+    href: "logo-redaction",
   },
 ];
 
