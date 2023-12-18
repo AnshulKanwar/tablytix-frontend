@@ -21,7 +21,7 @@ export default function Button({
       {asLink ? (
         <Link
           href={href!}
-          className={`max-w-fit px-4 py-1.5 text-sm rounded-lg bg-zinc-800 dark:bg-zinc-100 text-white dark:text-black ${className}`}
+          className={`max-w-fit px-5 py-2 text-sm rounded-lg bg-zinc-800 dark:bg-zinc-100 text-white dark:text-black ${className}`}
         >
           {children}
         </Link>
