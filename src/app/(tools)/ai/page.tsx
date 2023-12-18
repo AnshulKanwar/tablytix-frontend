@@ -1,6 +1,6 @@
 "use client";
 
-import { UploadButton } from "@uploadthing/react";
+import { UploadButton } from "@/components/uploadthing";
 import Chat from "./chat";
 import { useState } from "react";
 import Image from "next/image";
