@@ -14,6 +14,10 @@ const links = [
     name: "Table Extraction",
     href: "table-extraction",
   },
+  {
+    name: "AI Chat",
+    href: "ai",
+  },
 ];
 
 // TODO: responsive Nav
