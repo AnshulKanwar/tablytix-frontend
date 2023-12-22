@@ -23,7 +23,7 @@ const links = [
 // TODO: responsive Nav
 export default function Nav() {
   return (
-    <nav className="py-10 flex justify-between">
+    <nav className="py-8 flex justify-between">
       <div>
         <Link href="/">
           <h1 className="text-3xl font-bold">Tablytix</h1>
